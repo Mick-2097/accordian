@@ -7,6 +7,7 @@ questionArea.addEventListener('click', event => {
     if (!event.target.classList.contains('question')) return
     if (event.target.style.fontWeight === 'bold') {
         event.target.style.fontWeight = 'normal'
+        event.target.style.borderBottom = '1px solid hsl(240, 5%, 91%)'
         event.target.nextElementSibling.style.display = 'none'
         event.target.querySelector('img').classList.remove('flip')
     }else {
@@ -15,6 +16,7 @@ questionArea.addEventListener('click', event => {
         arrows.forEach(x => x.classList.remove('flip'))
         event.target.style.color = 'var(--text)'
         event.target.style.fontWeight = 'bold'
+        event.target.style.borderBottom = 'none'
         event.target.nextElementSibling.style.display = 'block'
         event.target.querySelector('img').classList.add('flip')
     }
