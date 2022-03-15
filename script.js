@@ -29,14 +29,13 @@ images.addEventListener('mouseenter', event => {
 images.addEventListener('mouseleave', event => {
     box.classList.remove('shift')
 })
-questionArea.addEventListener('mouseenter', event => {
+questionArea.addEventListener('mouseover', event => {
     if (event.target.classList.contains('question') 
         && event.target.style.fontWeight !== 'bold') {
-        console.log('listener still works')
         event.target.style.color = 'var(--text-hover)'
     }
 })
-questionArea.addEventListener('mousleave', event => {
+questionArea.addEventListener('mouseout', event => {
     if (event.target.classList.contains('question') 
         && event.target.style.fontWeight !== 'bold') {
         event.target.style.color = 'var(--text)'
