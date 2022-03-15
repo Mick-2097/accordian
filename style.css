@@ -159,3 +159,6 @@ footer a:hover {
         display: none;
     }
 }
+.shift {
+    transform: translateY(113%) translateX(-68%);
+}
