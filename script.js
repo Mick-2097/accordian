@@ -23,13 +23,13 @@ questionArea.addEventListener('click', event => {
 })
 questionArea.addEventListener('mouseover', event => {
     if (event.target.classList.contains('question') 
-        && event.target.style.fontWeight === 'normal') {
+        && event.target.style.fontWeight !== 'bold') {
         event.target.style.color = 'var(--text-hover)'
     }
 })
 questionArea.addEventListener('mouseout', event => {
     if (event.target.classList.contains('question') 
-        && event.target.style.fontWeight === 'normal') {
+        && event.target.style.fontWeight !== 'bold') {
         event.target.style.color = 'var(--text)'
     }
 })
