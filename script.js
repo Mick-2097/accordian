@@ -24,7 +24,6 @@ questionArea.addEventListener('click', event => {
     }
 })
 images.addEventListener('mouseenter', event => {
-    console.log('mouse entered box')
     box.classList.add('shift')
 })
 images.addEventListener('mouseleave', event => {
@@ -33,6 +32,7 @@ images.addEventListener('mouseleave', event => {
 questionArea.addEventListener('mouseenter', event => {
     if (event.target.classList.contains('question') 
         && event.target.style.fontWeight !== 'bold') {
+        console.log('listener still works')
         event.target.style.color = 'var(--text-hover)'
     }
 })
