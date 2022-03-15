@@ -2,6 +2,8 @@ let questions = document.querySelectorAll('.question')
 let answers = document.querySelectorAll('.answer')
 let arrows = document.querySelectorAll('.arrow')
 let questionArea = document.querySelector('.questions')
+let images = document.querySelector('.images')
+let box = document.querySelector('.box')
 
 questionArea.addEventListener('click', event => {
     if (!event.target.classList.contains('question')) return
@@ -21,13 +23,20 @@ questionArea.addEventListener('click', event => {
         event.target.querySelector('img').classList.add('flip')
     }
 })
-questionArea.addEventListener('mouseover', event => {
+images.addEventListener('mouseenter', event => {
+    console.log('mouse entered box')
+    box.classList.add('shift')
+})
+images.addEventListener('mouseleave', event => {
+    box.classList.remove('shift')
+})
+questionArea.addEventListener('mouseenter', event => {
     if (event.target.classList.contains('question') 
         && event.target.style.fontWeight !== 'bold') {
         event.target.style.color = 'var(--text-hover)'
     }
 })
-questionArea.addEventListener('mouseout', event => {
+questionArea.addEventListener('mousleave', event => {
     if (event.target.classList.contains('question') 
         && event.target.style.fontWeight !== 'bold') {
         event.target.style.color = 'var(--text)'
